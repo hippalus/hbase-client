@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+  <!-- hadoop-2.0.5+'s HDFS-4305 by default enforces a min blocks size
+       of 1024*1024.  Many unit tests that use the hlog use smaller
+       blocks.  Setting this config to 0 to have tests pass -->
+  <property>
+    <name>dfs.namenode.fs-limits.min-block-size</name>
+    <value>0</value>
+  </property>
+  <property>
+    <description>Default is 10</description>
+    <name>dfs.datanode.handler.count</name>
+    <value>5</value>
+  </property>
+  <property>
+    <description>Default is 10</description>
+    <name>dfs.namenode.handler.count</name>
+    <value>5</value>
+  </property>
+  <property>
+    <description>Default is 10</description>
+    <name>dfs.namenode.service.handler.count</name>
+    <value>5</value>
+  </property>
+  <!--
+   Constraining this config makes tests fail.
+  <property>
+    <name>dfs.datanode.max.transfer.threads</name>
+    <value>16</value>
+    <description>Default is 4096. If constrain this
+    too much, tests do not complete.</description>
+  </property>
+  -->
+</configuration>
