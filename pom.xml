@@ -21,7 +21,7 @@
     <hbase.version>2.1.4</hbase.version>
     <curator.version>5.1.0</curator.version>
     <slf4j.version>1.7.25</slf4j.version>
-    <hadoop.version>3.0.0</hadoop.version>
+    <hadoop.version>3.2.4</hadoop.version>
     <hbase-thirdparty.version>3.4.0</hbase-thirdparty.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <zookeeper.version>3.4.10</zookeeper.version>
